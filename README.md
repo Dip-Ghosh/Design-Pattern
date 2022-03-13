@@ -1,20 +1,10 @@
-## SOLID Principles Examples in PHP & Laravel
+## Design Pattern in PHP & Laravel
 
-### Single Responsibility Principle ([Example](./SingleResponsibilityPrinciple.php))
+### Strategy ([Example](./SingleResponsibilityPrinciple.php))
 
->Single Responsibility Principle  states that a class should have a single responsibility but not more than that. Simple a class should have one reason to change.
-
-### Open Closed Principle ([Example](./OpenClosedPrinciple.php))
-
->Objects or entities should be open for extension but closed for modification.
-### Liskov Substitution Principle ([Example](./LiskovSubstitutionPrinciple.php))
-
->Derived classes must be substitutable for their base classes.Simply says that codes that work with parent classes or interfaces should not break when those classes are replaced with the child classes or interface- implementing classes.
-### Interface Segregation Principle ([Example](./InterfaceSegregationPrinciple.php))
-
->A client should never be forced to implement an interface that does not use or a client should not forced to depend on methods that they do not use.
-
-### Dependency Inversion Principle ([Example](./DependencyInversionPrinciple.php))
-
->Higher level modules should not depend on lower level oneQs.Both should depend on abstraction.
-
+>Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable. This pattern is used when you might have multiple way to solve a problem, and you want to let the client choose which one to use.
+        
+    If you use Laravel then you are probably used to the config options, such as in **config/logging.php yo**u have this line:
+    **'default' => env('LOG_CHANNEL', 'stack')**
+    You can set it to various options such as 'stack', 'stderr', 'single' - each of these will load a different logging class - this uses the strategy pattern.
+ 
