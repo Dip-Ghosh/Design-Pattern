@@ -13,11 +13,16 @@ login with email or mobile number <br>
 simplify unit testing switching between files and memory storage <br>
 
 ### Diagram Example
-img 
+
+<img width="100%" src="./uml10.png"  width="450px" height="350px"/>
+
 ### Laravel Usage:
 If you use Laravel then you are probably used to the config options, such as in
-**config/logging.php ** you have this line:
-**'default' => env('LOG_CHANNEL', 'stack')**
+**config/logging.php ** 
+you have this line: </br>
+
+**'default' => env('LOG_CHANNEL', 'stack')**. <br>
+
 You can set it to various options such as 'stack', 'stderr', 'single' - each of these will
 load a different logging class - this uses the strategy pattern.
  
