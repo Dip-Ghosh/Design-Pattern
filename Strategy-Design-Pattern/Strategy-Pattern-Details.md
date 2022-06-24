@@ -14,7 +14,8 @@ simplify unit testing switching between files and memory storage <br>
 
 ### Diagram Example
 
-<img width="100%" src="./uml10.png"  width="270px" height="150px"/>
+<img src="./uml10.png"  width="240px"/>
+source : online
 
 ### Code Example
 
