@@ -1,6 +1,6 @@
 <?php
  use StrategyPattern\SendMessage;
-Class SendThroughEmail implements Sendable
+Class SendThroughEmail implements SendAbleMessage
 {
     public function sendNotification()
     {

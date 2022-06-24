@@ -14,7 +14,12 @@ simplify unit testing switching between files and memory storage <br>
 
 ### Diagram Example
 
-<img width="100%" src="./uml10.png"  width="350px" height="300px"/>
+<img width="100%" src="./uml10.png"  width="270px" height="150px"/>
+
+### Code Example
+
+ ([Example 1](./Payment-strategy/PaymentController.php))
+ ([Example 2](./Notification-Strategy/MessageSendController.php))
 
 ### Laravel Usage:
 If you use Laravel then you are probably used to the config options, such as in

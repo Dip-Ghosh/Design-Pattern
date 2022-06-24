@@ -1,5 +1,5 @@
 <?php
-Class strategyPattern{
+Class NotificationStrategy{
 
     public function sendByStrategy($strategy)
     {
