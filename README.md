@@ -6,7 +6,7 @@
 >put each of them into a separate class, and make their objects interchangeable. This pattern is used when you might have multiple way to solve a problem, and you want to let the client choose which one to use.
         
     If you use Laravel then you are probably used to the config options, such as in
-    **config/logging.php yo**u have this line:
+    **config/logging.php ** you have this line:
 
     **'default' => env('LOG_CHANNEL', 'stack')**
 
