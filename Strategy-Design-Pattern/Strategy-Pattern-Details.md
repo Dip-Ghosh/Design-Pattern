@@ -14,7 +14,7 @@ simplify unit testing switching between files and memory storage <br>
 
 ### Diagram Example
 
-<img width="100%" src="./uml10.png"  width="450px" height="350px"/>
+<img width="100%" src="./uml10.png"  width="350px" height="300px"/>
 
 ### Laravel Usage:
 If you use Laravel then you are probably used to the config options, such as in
