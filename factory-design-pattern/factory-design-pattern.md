@@ -18,7 +18,7 @@ Multiple Burgers ,pizza etc
 
 ### Diagram Example
 
-<img width="100%" src="./factory.png"  width="270px" height="150px"/>
+<img width="100%" src="./factory.png"  width="120px" height="150px"/>
 
 ### Code Example
 
