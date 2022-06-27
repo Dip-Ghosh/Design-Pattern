@@ -8,6 +8,6 @@ The simple factory methods return instances of different classes based on differ
 
 ### Code Example
 
-([Example](./simple-factory/FanController.php))
+([Example](./FanController.php))
 
  
