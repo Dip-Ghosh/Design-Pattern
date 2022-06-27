@@ -5,7 +5,7 @@
 put each of them into a separate class, and make their objects interchangeable. This pattern is used when you might have multiple way to solve a problem, and you want to let the client choose which one to use.
 
 
-### Simple Factory ([Details](simple_factory/simple_factory.md))
+### Simple Factory ([Details](simple-factory/simple-factory.md))
 >Simple factory pattern, also known as static factory method pattern,
 > it belongs to the class creation pattern. In the simple factory pattern,
 > you can return instances of different classes based on different parameters.
