@@ -15,11 +15,13 @@ simplify unit testing switching between files and memory storage <br>
 ### Diagram Example
 
 <img src="./uml10.png"  width="240px"/>
+
 source : online
 
 ### Code Example
 
  ([Example 1](./Payment-strategy/PaymentController.php))
+
  ([Example 2](./Notification-Strategy/MessageSendController.php))
 
 ### Laravel Usage:
