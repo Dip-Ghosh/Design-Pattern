@@ -73,7 +73,7 @@
 [//]: # (#### Visitor &#40;[Details]&#40;strategy/Strategy-Pattern-Details.md&#41;&#41;)
 
 
-## Behavioral Design Patterns
+## Other Design Patterns
 
 [//]: # (#### Service Locator &#40; [Details]&#40;simple-factory/simple-factory.md&#41; &#41;)
 
