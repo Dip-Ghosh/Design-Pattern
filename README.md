@@ -7,7 +7,7 @@
 
 #### Simple Factory ( [Details](simple-factory/simple-factory.md) )
 #### Factory Method ( [Details](factory-method/factory-design-pattern.md) )
-#### Abstract Factory ( [Details](simple-factory/simple-factory.md) )
+#### Abstract Factory ( [Details](abstract-factory/abstract-factory.md) )
 
 [//]: # (#### Static Factory &#40; [Details]&#40;simple-factory/simple-factory.md&#41; &#41;)
 
