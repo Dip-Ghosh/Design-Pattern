@@ -1,0 +1,9 @@
+services:
+  invoice:
+    build: .
+    container_name: Design-Pattern
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
