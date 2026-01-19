@@ -1,9 +1,9 @@
 FROM php:8.2-cli
 
-# Set working directory
 WORKDIR /app
 
-# Copy source code
+RUN docker-php-ext-install pdo pdo_mysql
+
 COPY . /app
 
 # Show PHP version (useful for debugging)

@@ -1,21 +1,30 @@
 <?php
+declare(strict_types=1);
 
-declare(strict_types = 1);
+namespace Singleton;
 
 final class Logger
 {
     private static ?self $instance = null;
-    private string       $logFile;
+    private string       $file;
 
     private function __construct()
     {
-        $config        = Config::getInstance();
-        $this->logFile = $config->get('log')['file'];
+        $config     = Config::getInstance();
+        $this->file = $config->get('log.file');
+
+        if (!$this->file) {
+            throw new \RuntimeException('Log file not configured');
+        }
     }
 
     public static function getInstance(): self
     {
-        return self::$instance ??= new self();
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
     }
 
     public function info(string $message): void
@@ -36,10 +45,7 @@ final class Logger
     private function write(string $level, string $message): void
     {
         $time = date('Y-m-d H:i:s');
-        file_put_contents(
-            $this->logFile,
-            "{$time} [{$level}] {$message}\n",
-            FILE_APPEND
+        file_put_contents($this->file, "{$time} [{$level}] {$message}\n", FILE_APPEND
         );
     }
 }

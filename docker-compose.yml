@@ -1,9 +1,10 @@
 services:
-  invoice:
-    build: .
-    container_name: Design-Pattern
-    working_dir: /app
+  php-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: design-pattern-tests
     volumes:
       - .:/app
-    ports:
-      - "8000:8000"
+    working_dir: /app
+    command: php run-tests.php
