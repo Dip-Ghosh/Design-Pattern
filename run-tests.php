@@ -13,10 +13,31 @@ $iterator = new RecursiveIteratorIterator(
     new RecursiveDirectoryIterator($root . '/src')
 );
 
+$files = [];
 foreach ($iterator as $file) {
     if ($file->isFile() && $file->getExtension() === 'php') {
-        require_once $file->getPathname();
+        $files[] = $file->getPathname();
     }
+}
+
+$interfaces = [];
+$abstracts  = [];
+$classes    = [];
+
+foreach ($files as $file) {
+    $contents = file_get_contents($file);
+
+    if (preg_match('/interface\s+\w+/', $contents)) {
+        $interfaces[] = $file;
+    } elseif (preg_match('/abstract\s+class\s+\w+/', $contents)) {
+        $abstracts[] = $file;
+    } else {
+        $classes[] = $file;
+    }
+}
+
+foreach (array_merge($interfaces, $abstracts, $classes) as $file) {
+    require_once $file;
 }
 
 /* Load tests */
@@ -27,6 +48,7 @@ foreach (glob($root . '/tests/*Test.php') as $file) {
 /* Run */
 $tests = [
     new LoggerTest(),
+    new PaymentTest(),
 ];
 
 exit(TestRunner::run($tests));
