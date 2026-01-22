@@ -5,7 +5,7 @@ use Singleton\Config;
 use Singleton\Database;
 use Singleton\Logger;
 
-final class LoggerTest extends TestCase
+final class SingletonTest extends TestCase
 {
     public function testSingleInstance(): bool
     {

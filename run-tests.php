@@ -47,8 +47,9 @@ foreach (glob($root . '/tests/*Test.php') as $file) {
 
 /* Run */
 $tests = [
-    new LoggerTest(),
-    new PaymentTest(),
+    new SingletonTest(),
+    new FactoryMethodTest(),
+    new AbstractFactoryTest(),
 ];
 
 exit(TestRunner::run($tests));

@@ -8,7 +8,7 @@ use FactoryMethod\Nagad;
 use FactoryMethod\PaymentFactory;
 use FactoryMethod\PaymentService;
 
-final class PaymentTest extends TestCase
+final class FactoryMethodTest extends TestCase
 {
     public function test_it_creates_nagad_payment()
     {
