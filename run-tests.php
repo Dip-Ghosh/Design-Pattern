@@ -4,13 +4,13 @@ declare(strict_types=1);
 $root = __DIR__;
 
 /* Load test framework */
-foreach (glob($root . '/tests/Framework/*.php') as $file) {
+foreach (glob($root.'/tests/Framework/*.php') as $file) {
     require_once $file;
 }
 
 /* Load src recursively (includes src/singleton) */
 $iterator = new RecursiveIteratorIterator(
-    new RecursiveDirectoryIterator($root . '/src')
+    new RecursiveDirectoryIterator($root.'/src')
 );
 
 $files = [];
@@ -41,7 +41,7 @@ foreach (array_merge($interfaces, $abstracts, $classes) as $file) {
 }
 
 /* Load tests */
-foreach (glob($root . '/tests/*Test.php') as $file) {
+foreach (glob($root.'/tests/*Test.php') as $file) {
     require_once $file;
 }
 
@@ -50,6 +50,7 @@ $tests = [
     new SingletonTest(),
     new FactoryMethodTest(),
     new AbstractFactoryTest(),
+    new PrototypeTest(),
 ];
 
 exit(TestRunner::run($tests));

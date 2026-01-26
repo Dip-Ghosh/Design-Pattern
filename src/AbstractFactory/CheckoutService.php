@@ -1,15 +1,25 @@
-class LinkedInPost
-{
-public string $text;
-public array $hashtags = [];
-public ?string $image = null;
-public ?string $link = null;
+<?php
 
-public function preview(): void
+namespace AbstractFactory;
+
+class CheckoutService
 {
-echo $this->text . PHP_EOL;
-echo implode(' ', $this->hashtags) . PHP_EOL;
-echo $this->image ? "Image: {$this->image}\n" : '';
-echo $this->link ? "Link: {$this->link}\n" : '';
-}
+    private PaymentProcessor $payment;
+    private RefundProcessor  $refund;
+
+    public function __construct(PaymentGatewayFactory $factory)
+    {
+        $this->payment = $factory->createPaymentProcessor();
+        $this->refund  = $factory->createRefundProcessor();
+    }
+
+    public function checkout(float $amount): void
+    {
+        echo $this->payment->pay($amount);
+    }
+
+    public function refund(string $transactionId, float $amount): void
+    {
+        echo $this->refund->refund($transactionId, $amount);
+    }
 }
